@@ -5,7 +5,7 @@ module PgTenant
 
     module ClassMethods
       def pg_tenant
-
+        print "type: #{type}"
       end
     end
   end

@@ -5,7 +5,12 @@ class CreateTenants < ActiveRecord::Migration
     create_table :tenants do |t|
       t.string :tenant_name, null: false
       t.string :adapter, null: false
-      t.string :options
+      t.string :host_name
+      t.integer :port
+      t.string :database_name
+      t.string :schema_name
+      t.text :options
+      t.integer :status
       t.timestamps null: false
     end
 

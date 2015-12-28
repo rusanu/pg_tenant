@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Remus Rusanu"]
   spec.email         = ["remusr@apache.org"]
 
-  spec.summary       = %q{ Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{ Write a longer description or delete this line.}
-  spec.homepage      = "http://url"
+  spec.summary       = %q{Multi-tenancy gem for PostgreSQL.}
+  spec.description   = %q{PostgreSQL based scale-out multi-tenancy with migration support.}
+  spec.homepage      = "https://github.com/rusanu/pg_tenant"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

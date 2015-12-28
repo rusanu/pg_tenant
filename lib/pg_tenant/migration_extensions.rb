@@ -6,14 +6,14 @@ module PgTenant
 
     module ClassMethods
 
-      def pg_tenant(type, opts = {})
+      def pg_tenant(type)
         self.class_eval do
           old_exec_migration = instance_method(:exec_migration)
 
           define_method(:exec_migration) do |connection, options|
-            Rails.logger.warn ":exec_migrations #{type}: #{connection.inspect}"
-
-            old_exec_migration.bind(self).(connection, options)
+            if PgTenant.is_current_type(type)
+              old_exec_migration.bind(self).(connection, options)
+            end
           end
         end
       end
