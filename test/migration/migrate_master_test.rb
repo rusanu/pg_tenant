@@ -3,7 +3,7 @@ module ActiveRecord
   class Migration
     pg_tenant :master
 
-    class MigrateMaster < ActiveSupport::TestCase
+    class MigrateMasterTest < ActiveSupport::TestCase
 
     end
   end

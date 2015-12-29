@@ -7,7 +7,7 @@ module PgTenant
   class << self
     extend Forwardable
 
-    ACCESSOR_METHODS = []
+    ACCESSOR_METHODS = [:configurations]
     WRITER_METHODS = [:connection_class]
 
     attr_accessor(*ACCESSOR_METHODS)
@@ -16,7 +16,8 @@ module PgTenant
     def_delegators :connection_class, 
       :connection, 
       :connection_config, 
-      :establish_connection
+      :establish_connection,
+      :configurations
 
     def connection_class
       @connection_class || ActiveRecord::Base

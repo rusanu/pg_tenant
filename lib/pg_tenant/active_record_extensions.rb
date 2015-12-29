@@ -4,8 +4,7 @@ module PgTenant
     extend ActiveSupport::Concern
 
     module ClassMethods
-      def pg_tenant
-        print "type: #{type}"
+      def pg_tenant (type)
       end
     end
   end

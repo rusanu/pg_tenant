@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: postgresql
+  host_name: localhost
+  database_name: <%= ActiveRecord::Base.configurations[Rails.env]['database'] %>
+
+One:
+  <<: *defaults
+  tenant_name: one
+  schema_name: one
+
+Two:
+  <<: *defaults
+  tenant_name: two
+  schema_name: two
+
